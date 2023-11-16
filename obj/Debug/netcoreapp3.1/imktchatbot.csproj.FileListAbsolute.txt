@@ -8,9 +8,6 @@ C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcorea
 C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\scripts\package.json
 C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\settings\appsettings.json
 C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\imktchatbot.dialog
-C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\recognizers\emptyBot.en-us.lu.dialog
-C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\recognizers\emptyBot.lu.dialog
-C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\recognizers\emptyBot.lu.qna.dialog
 C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\recognizers\imktchatbot.en-us.lu.dialog
 C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\recognizers\imktchatbot.lu.dialog
 C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\recognizers\imktchatbot.lu.qna.dialog
@@ -138,3 +135,5 @@ C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\obj\Debug\netcorea
 C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\obj\Debug\netcoreapp3.1\imktchatbot.dll
 C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\obj\Debug\netcoreapp3.1\imktchatbot.pdb
 C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\obj\Debug\netcoreapp3.1\imktchatbot.genruntimeconfig.cache
+C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\generated\interruption\imktchatbot.en-us.lu
+C:\Users\InterMediaKTPersonne\Desktop\imktchatbot\imktchatbot\bin\Debug\netcoreapp3.1\generated\interruption\imktchatbot.en-us.qna
