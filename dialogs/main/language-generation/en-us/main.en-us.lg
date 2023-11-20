@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_o9I3RJ()
+[Activity
+    Text = ${ChoiceInput_Prompt_o9I3RJ_text()}
+]
+
+# ChoiceInput_Prompt_o9I3RJ_text()
+- Please select 

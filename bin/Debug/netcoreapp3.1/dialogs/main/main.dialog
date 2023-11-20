@@ -1,0 +1,88 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "cxhw6s",
+    "name": "main",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "opXk2O"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "o9I3RJ"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_o9I3RJ()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "style": "heroCard",
+          "choices": [
+            "About Intermediakt",
+            "Opportunities",
+            "Collaboration"
+          ],
+          "property": "user.choice"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "Hc1i3n"
+          },
+          "condition": "user.choice",
+          "cases": [
+            {
+              "value": "About Intermediakt",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "Icibe6"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "about"
+                },
+                {
+                  "$kind": "Microsoft.DeleteProperty",
+                  "$designer": {
+                    "id": "vPvKMT"
+                  },
+                  "property": "user.choice"
+                }
+              ]
+            },
+            {
+              "value": "Opportunities"
+            },
+            {
+              "value": "Collaboration"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "main.lg",
+  "recognizer": "main.lu.qna",
+  "id": "main"
+}

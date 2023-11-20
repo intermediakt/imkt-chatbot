@@ -44,18 +44,12 @@
               ]
             },
             {
-              "$kind": "Microsoft.ChoiceInput",
+              "$kind": "Microsoft.BeginDialog",
               "$designer": {
-                "id": "6MGSES"
+                "id": "foiIOj"
               },
-              "defaultLocale": "en-us",
-              "disabled": false,
-              "maxTurnCount": 3,
-              "alwaysPrompt": false,
-              "allowInterruptions": false,
-              "unrecognizedPrompt": "",
-              "invalidPrompt": "",
-              "defaultValueResponse": ""
+              "activityProcessed": true,
+              "dialog": "main"
             }
           ]
         }
@@ -77,9 +71,87 @@
           "activity": "${SendActivity_DidNotUnderstand()}"
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "TnsbO8",
+        "name": "opportunities"
+      },
+      "intent": "opportunities",
+      "actions": []
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "fNn9qO",
+        "name": "Collaboration"
+      },
+      "intent": "Collaboration"
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "EsvxiW",
+        "name": "DiscoverOurWork"
+      },
+      "intent": "DiscoverOurWork",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "7UlXKH"
+          },
+          "activity": "${SendActivity_7UlXKH()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "gqeRN2",
+        "name": "ExploreProjects"
+      },
+      "intent": "ExploreProjects",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "ilhMf4"
+          },
+          "activity": "${SendActivity_ilhMf4()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "IJCa3V"
+          },
+          "activity": "${SendActivity_IJCa3V()}"
+        }
+      ]
     }
   ],
   "generator": "imktchatbot.lg",
   "id": "imktchatbot",
-  "recognizer": "imktchatbot.lu.qna"
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "opportunities",
+        "pattern": "opportunities"
+      },
+      {
+        "intent": "Collaboration",
+        "pattern": "collaboration"
+      },
+      {
+        "intent": "DiscoverOurWork",
+        "pattern": "Discover what we do"
+      },
+      {
+        "intent": "ExploreProjects",
+        "pattern": "Explore our current projects"
+      }
+    ]
+  }
 }

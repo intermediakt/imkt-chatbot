@@ -14,3 +14,24 @@
 
 # SendActivity_DidNotUnderstand_text()
 - Sorry, I didn't get that.
+# SendActivity_7UlXKH()
+[Activity
+    Text = ${SendActivity_7UlXKH_text()}
+]
+
+# SendActivity_7UlXKH_text()
+- discover what we doooooo
+# SendActivity_ilhMf4()
+[Activity
+    Text = ${SendActivity_ilhMf4_text()}
+]
+
+# SendActivity_ilhMf4_text()
+- projecttttttsss
+# SendActivity_IJCa3V()
+[Activity
+    Text = ${SendActivity_IJCa3V_text()}
+]
+
+# SendActivity_IJCa3V_text()
+- Here are the list of our projects

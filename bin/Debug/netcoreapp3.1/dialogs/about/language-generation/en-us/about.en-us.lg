@@ -1,0 +1,54 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_gnfcPt()
+[Activity
+    Text = ${ChoiceInput_Prompt_gnfcPt_text()}
+]
+
+# ChoiceInput_Prompt_gnfcPt_text()
+- Please select your choice
+# SendActivity_MArtdY()
+[Activity
+    Text = ${SendActivity_MArtdY_text()}
+]
+
+# SendActivity_MArtdY_text()
+- ```InterMediaKT (Interactive Media Knowledge Transfer) is an NGO based in Patras, Greece, working since 2012 in the fields of education, training and innovation at the European level. Through technology tools, collaborations and the exchange of good practices, we try to achieve our main aim of Knowledge Transfer.
+```
+# SendActivity_DsGvXb()
+[Activity
+    Text = ${SendActivity_DsGvXb_text()}
+]
+
+# SendActivity_DsGvXb_text()
+- Education
+# SendActivity_RszcLe()
+[Activity
+    Text = ${SendActivity_RszcLe_text()}
+]
+
+# SendActivity_RszcLe_text()
+- IT
+# SendActivity_R7xeZI()
+[Activity
+    Text = ${SendActivity_R7xeZI_text()}
+]
+
+# SendActivity_R7xeZI_text()
+- Design & Multimedia
+# SendActivity_qJEZ7C()
+[Activity
+    Text = ${SendActivity_qJEZ7C_text()}
+]
+
+# SendActivity_qJEZ7C_text()
+- Communication
+# SendActivity_YxJLXW()
+[Activity
+    Text = ${SendActivity_YxJLXW_text()}
+]
+
+# SendActivity_YxJLXW_text()
+- ```[Activity
+    type = Typing
+]```
