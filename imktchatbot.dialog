@@ -44,6 +44,22 @@
               ]
             },
             {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "q9ewkK"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${TextInput_Prompt_q9ewkK()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "user.name",
+              "outputFormat": "=trim(user.name)"
+            },
+            {
               "$kind": "Microsoft.BeginDialog",
               "$designer": {
                 "id": "foiIOj"
@@ -79,15 +95,16 @@
         "name": "opportunities"
       },
       "intent": "opportunities",
-      "actions": []
-    },
-    {
-      "$kind": "Microsoft.OnIntent",
-      "$designer": {
-        "id": "fNn9qO",
-        "name": "Collaboration"
-      },
-      "intent": "Collaboration"
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "kvrtoN"
+          },
+          "activityProcessed": true,
+          "dialog": "opportunities"
+        }
+      ]
     },
     {
       "$kind": "Microsoft.OnIntent",
@@ -98,11 +115,12 @@
       "intent": "DiscoverOurWork",
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "7UlXKH"
+            "id": "0ivqMB"
           },
-          "activity": "${SendActivity_7UlXKH()}"
+          "activityProcessed": true,
+          "dialog": "discoverOurWork"
         }
       ]
     },
@@ -115,18 +133,120 @@
       "intent": "ExploreProjects",
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "ilhMf4"
+            "id": "f5E96r"
           },
-          "activity": "${SendActivity_ilhMf4()}"
-        },
+          "activityProcessed": true,
+          "dialog": "exploreOurProjects"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "eb6Y4r",
+        "name": "YouthTraining"
+      },
+      "intent": "YouthTraining",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "XNo93M"
+          },
+          "activityProcessed": true,
+          "dialog": "get_YouthTraining"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "UG9DLi",
+        "name": "Volunteering"
+      },
+      "intent": "Volunteering",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "y7Kbiv"
+          },
+          "activityProcessed": true,
+          "dialog": "get_volunteering"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "cDf0T4",
+        "name": "AboutIntermediakt"
+      },
+      "intent": "AboutIntermediakt",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "j158Uw"
+          },
+          "activityProcessed": true,
+          "dialog": "aboutIntermediakt"
+        }
+      ],
+      "entities": []
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "VlbrWo",
+        "name": "Collaboration"
+      },
+      "intent": "Collaboration",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "t0nL7h"
+          },
+          "activityProcessed": true,
+          "dialog": "collaboration"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "KPir5Y",
+        "name": "AboutUs"
+      },
+      "intent": "AboutUs",
+      "actions": [
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "IJCa3V"
+            "id": "c9cott"
           },
-          "activity": "${SendActivity_IJCa3V()}"
+          "activity": "${SendActivity_c9cott()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "hLxyxf",
+        "name": "Internships"
+      },
+      "intent": "Internships",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "9JldHq"
+          },
+          "activityProcessed": true,
+          "dialog": "get_internships"
         }
       ]
     }
@@ -141,16 +261,36 @@
         "pattern": "opportunities"
       },
       {
-        "intent": "Collaboration",
-        "pattern": "collaboration"
-      },
-      {
         "intent": "DiscoverOurWork",
         "pattern": "Discover what we do"
       },
       {
         "intent": "ExploreProjects",
         "pattern": "Explore our current projects"
+      },
+      {
+        "intent": "YouthTraining",
+        "pattern": "Youth Training and Exchanges"
+      },
+      {
+        "intent": "Volunteering",
+        "pattern": "Volunteering"
+      },
+      {
+        "intent": "AboutIntermediakt",
+        "pattern": "About Intermediakt"
+      },
+      {
+        "intent": "Collaboration",
+        "pattern": "Collaboration"
+      },
+      {
+        "intent": "AboutUs",
+        "pattern": "About Us"
+      },
+      {
+        "intent": "Internships",
+        "pattern": "internships"
       }
     ]
   }

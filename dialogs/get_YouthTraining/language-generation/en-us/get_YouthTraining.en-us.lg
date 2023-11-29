@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_6UsOk5_text()
+- ```At Intermediakt, we offer different opportunities for Youth Training. Both in Patras but also around europe.
+Check our website for more info about the matter.```
+# SendActivity_6UsOk5()
+[Activity
+    Text = ${SendActivity_6UsOk5_text()}
+]

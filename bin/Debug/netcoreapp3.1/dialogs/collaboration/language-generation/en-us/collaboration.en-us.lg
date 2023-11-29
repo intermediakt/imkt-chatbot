@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_cSGvNg()
+[Activity
+    Text = ${SendActivity_cSGvNg_text()}
+]
+
+# SendActivity_cSGvNg_text()
+- Thank you for considering to collaborate with us. We advise to check our [collaboration page](https://intermediakt.org/lets-collaborate/) that covers a lot of information

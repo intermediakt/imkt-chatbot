@@ -1,0 +1,40 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "JmmmMa",
+    "name": "get_internships",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "JM5Yer"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "P7fmPK"
+          },
+          "activity": "${SendActivity_P7fmPK()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "qJyNCb"
+          },
+          "activityProcessed": true,
+          "dialog": "otherQuestions"
+        }
+      ]
+    }
+  ],
+  "generator": "get_internships.lg",
+  "recognizer": "get_internships.lu.qna",
+  "id": "get_internships"
+}

@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_XpPZOc_text()
+- We have a diverse range of opportunities
+# ChoiceInput_Prompt_XpPZOc()
+[Activity
+    Text = ${ChoiceInput_Prompt_XpPZOc_text()}
+]
+
+# SendActivity_z1Gg9i()
+[Activity
+    Text = ${SendActivity_z1Gg9i_text()}
+]
+
+# SendActivity_z1Gg9i_text()
+- Please choose one of the possible choices
+# SendActivity_9YFQyK()
+[Activity
+    Text = ${SendActivity_9YFQyK_text()}
+]
+
+# SendActivity_9YFQyK_text()
+- okqaa

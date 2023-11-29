@@ -6,4 +6,11 @@
 ]
 
 # ChoiceInput_Prompt_o9I3RJ_text()
-- Please select 
+- Please select the information you're requesting
+# SendActivity_sCQKXD()
+[Activity
+    Text = ${SendActivity_sCQKXD_text()}
+]
+
+# SendActivity_sCQKXD_text()
+- Please Welcome ${user.name}

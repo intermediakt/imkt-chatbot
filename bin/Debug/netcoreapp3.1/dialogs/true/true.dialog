@@ -1,0 +1,281 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "EGc5kX",
+    "name": "true",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "n0W0Cc"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "yJAmpm"
+          },
+          "activity": "${SendActivity_yJAmpm()}"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "EQJ0D5"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_EQJ0D5()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "style": "heroCard",
+          "choices": [
+            "About Intermediakt",
+            "Opportunities",
+            "Collaboration"
+          ],
+          "property": "user.ok",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          },
+          "value": "=user.ok"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "MlifJY"
+          },
+          "condition": "user.ok",
+          "cases": [
+            {
+              "value": "About Intermediakt",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "Sd1AZU"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_Sd1AZU()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "choices": [
+                    "About Us",
+                    "Discover what we do",
+                    "Explore our current projects"
+                  ],
+                  "property": "user.aboutChoices",
+                  "style": "heroCard",
+                  "outputFormat": "${user.aboutChoices}",
+                  "recognizerOptions": {
+                    "recognizeOrdinals": true
+                  },
+                  "value": "=this.value"
+                },
+                {
+                  "$kind": "Microsoft.SwitchCondition",
+                  "$designer": {
+                    "id": "IfiIHW"
+                  },
+                  "condition": "user.aboutChoices",
+                  "cases": [
+                    {
+                      "value": "About Us",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "IkidrF"
+                          },
+                          "activity": "${SendActivity_IkidrF()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "Discover what we do",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "lATPEE"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "discoverOurWork"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "Explore our current projects",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "ZYrPXC"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "exploreOurProjects"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.DeleteProperty",
+                  "$designer": {
+                    "id": "L4fInd"
+                  },
+                  "property": "user.ok"
+                }
+              ]
+            },
+            {
+              "value": "Opportunities",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "VwY8gE"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_VwY8gE()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "choices": [
+                    "Internships",
+                    "Youth Training and Exchanges",
+                    "Volunteering"
+                  ],
+                  "property": "user.opportunitiesChoices",
+                  "style": "heroCard"
+                },
+                {
+                  "$kind": "Microsoft.SwitchCondition",
+                  "$designer": {
+                    "id": "jPsyu2"
+                  },
+                  "condition": "user.opportunitiesChoices",
+                  "default": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "jEo0wS"
+                      },
+                      "activity": "${SendActivity_jEo0wS()}"
+                    }
+                  ],
+                  "cases": [
+                    {
+                      "value": "Youth Training and Exchanges",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "nmvw7e"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "get_YouthTraining"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "Volunteering",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "ryl753"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "get_volunteering"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "Internships",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "IGuSYw"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "get_internships"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "Collaboration",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "LCn0Ld"
+                  },
+                  "activity": "${SendActivity_LCn0Ld()}"
+                },
+                {
+                  "$kind": "Microsoft.DeleteProperty",
+                  "$designer": {
+                    "id": "14wd7B"
+                  },
+                  "property": "user.ok"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "rMS26D"
+              },
+              "activity": "${SendActivity_rMS26D()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "true.lg",
+  "recognizer": "true.lu.qna",
+  "id": "true"
+}

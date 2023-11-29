@@ -17,6 +17,13 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "sCQKXD"
+          },
+          "activity": "${SendActivity_sCQKXD()}"
+        },
+        {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
             "id": "o9I3RJ"
@@ -29,7 +36,6 @@
           "prompt": "${ChoiceInput_Prompt_o9I3RJ()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
-          "defaultValueResponse": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -42,7 +48,11 @@
             "Opportunities",
             "Collaboration"
           ],
-          "property": "user.choice"
+          "property": "user.choice",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          },
+          "value": "=this.value"
         },
         {
           "$kind": "Microsoft.SwitchCondition",
@@ -60,24 +70,51 @@
                     "id": "Icibe6"
                   },
                   "activityProcessed": true,
-                  "dialog": "about"
-                },
-                {
-                  "$kind": "Microsoft.DeleteProperty",
-                  "$designer": {
-                    "id": "vPvKMT"
-                  },
-                  "property": "user.choice"
+                  "dialog": "aboutIntermediakt"
                 }
               ]
             },
             {
-              "value": "Opportunities"
+              "value": "Opportunities",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "GLla0L"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "opportunities"
+                }
+              ]
             },
             {
-              "value": "Collaboration"
+              "value": "Collaboration",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "6dHZaw"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "collaboration"
+                }
+              ]
             }
           ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "LVniGP"
+          },
+          "activityProcessed": true,
+          "dialog": "otherQuestions"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "JNJ6nz"
+          }
         }
       ]
     }

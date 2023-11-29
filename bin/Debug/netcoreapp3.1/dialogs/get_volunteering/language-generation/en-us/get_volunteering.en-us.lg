@@ -1,0 +1,29 @@
+[import](common.lg)
+
+# SendActivity_ibH3CG_text()
+- ```At Intermediakt, we have two different volunteering position. It can be through ESC or local volunteering. 
+```
+# SendActivity_ibH3CG()
+[Activity
+    Text = ${SendActivity_ibH3CG_text()}
+]
+
+# SendActivity_wjkeTr()
+[Activity
+    Text = ${SendActivity_wjkeTr_text()}
+]
+
+# SendActivity_wjkeTr_text()
+- An ESC project can include between 1 and 30 volunteers who contribute to the day-to-day activities of organizations. In which sector? Depending on what you care about and appreciate, environment, arts and culture, children, people with disabilities, social inclusion, intercultural learning, youth policies and much more.
+# SendActivity_aqVFxY()
+[Activity
+    Text = ${SendActivity_aqVFxY_text()}
+]
+
+# SendActivity_aqVFxY_text()
+- In order to learn more about this please visit our [become a volunteer](https://intermediakt.org/become-a-volunteer/) page
+# SendActivity_74O1OY()
+[Activity
+Type = ${"delay"}
+Value = ${1000}
+]

@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_P7fmPK_text()
+- At Intermediakt, we offer internships in various sectors of our company, ranging from IT and Design to Education and Fundraising. Our internship opportunities are challenging and promise to significantly impact your future experience. We ensure that our interns are well-integrated and receive adequate support. Additionally, we advocate for the right to fair compensation for interns.
+# SendActivity_P7fmPK()
+[Activity
+    Text = ${SendActivity_P7fmPK_text()}
+]
+

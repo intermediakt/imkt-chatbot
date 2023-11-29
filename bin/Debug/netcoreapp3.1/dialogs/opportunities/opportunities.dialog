@@ -1,0 +1,118 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "rjxiT5",
+    "name": "opportunities",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "Wpqsh0"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "XpPZOc"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_XpPZOc()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "Internships",
+            "Youth Training and Exchanges",
+            "Volunteering"
+          ],
+          "property": "user.opportunities",
+          "style": "heroCard"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "U3DBMl"
+          },
+          "condition": "user.opportunities",
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "z1Gg9i"
+              },
+              "activity": "${SendActivity_z1Gg9i()}"
+            }
+          ],
+          "cases": [
+            {
+              "value": "Youth Training and Exchanges",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "yDMI4F"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "get_YouthTraining"
+                }
+              ]
+            },
+            {
+              "value": "Volunteering",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "nY01IM"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "get_volunteering"
+                }
+              ]
+            },
+            {
+              "value": "Internships",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "gtp9kQ"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "get_internships"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "5vcumE"
+          },
+          "activityProcessed": true,
+          "dialog": "otherQuestions"
+        }
+      ]
+    }
+  ],
+  "generator": "opportunities.lg",
+  "recognizer": "opportunities.lu.qna",
+  "id": "opportunities"
+}

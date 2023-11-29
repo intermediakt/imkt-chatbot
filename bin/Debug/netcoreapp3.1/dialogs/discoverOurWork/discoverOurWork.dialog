@@ -1,0 +1,60 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "NEgmM4",
+    "name": "get_discoverOurWork",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "kQUgKN"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "lcLwXM"
+          },
+          "activity": "${SendActivity_lcLwXM()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "LvWfxS"
+          },
+          "activity": "${SendActivity_LvWfxS()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "fTx5ii"
+          },
+          "activity": "${SendActivity_fTx5ii()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "HbPzJE"
+          },
+          "activity": "${SendActivity_HbPzJE()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "wAPR0p"
+          },
+          "activity": "${SendActivity_wAPR0p()}"
+        }
+      ]
+    }
+  ],
+  "generator": "discoverOurWork.lg",
+  "recognizer": "discoverOurWork.lu.qna",
+  "id": "discoverOurWork"
+}

@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# SendActivity_k3OYdH()
+[Activity
+Type = ${"delay"}
+Value = ${1000}
+]
+# SendActivity_KUXiGQ_text()
+- ```Our projects cover Education, Employability, Environment and EU Citizenship as well as other important aspects.
+Check [more about our projects](https://intermediakt.org/active/)
+```
+# SendActivity_KUXiGQ()
+[Activity
+    Text = ${SendActivity_KUXiGQ_text()}
+]
+

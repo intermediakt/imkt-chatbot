@@ -1,0 +1,40 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "gpoZTs",
+    "name": "get_YouthTraining",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "VEgrZM"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "6UsOk5"
+          },
+          "activity": "${SendActivity_6UsOk5()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "szGU03"
+          },
+          "activityProcessed": true,
+          "dialog": "otherQuestions"
+        }
+      ]
+    }
+  ],
+  "generator": "get_YouthTraining.lg",
+  "recognizer": "get_YouthTraining.lu.qna",
+  "id": "get_YouthTraining"
+}

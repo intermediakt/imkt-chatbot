@@ -1,0 +1,123 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "9mHUSb",
+    "name": "aboutIntermediakt",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "0jfQK1"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.DeleteProperty",
+          "$designer": {
+            "id": "5PZerF"
+          },
+          "property": "user.choice"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "tV0k1X"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_tV0k1X()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "About Us",
+            "Discover what we do",
+            "Explore our current projects"
+          ],
+          "property": "user.achoice",
+          "style": "heroCard"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "y9Aon4"
+          },
+          "condition": "user.achoice",
+          "cases": [
+            {
+              "value": "About Us",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "ynlyeS"
+                  },
+                  "activity": "${SendActivity_ynlyeS()}"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "78qeCR"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "otherQuestions"
+                }
+              ]
+            },
+            {
+              "value": "Discover what we do",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "CJqftj"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "discoverOurWork"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "pRWock"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "otherQuestions"
+                }
+              ]
+            },
+            {
+              "value": "Explore our current projects",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "vdu2pu"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "exploreOurProjects"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "aboutIntermediakt.lg",
+  "recognizer": "aboutIntermediakt.lu.qna",
+  "id": "aboutIntermediakt"
+}

@@ -1,0 +1,39 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "c6ONFA",
+    "name": "get_exploreOurProjects",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "EXVYyv"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "k3OYdH"
+          },
+          "activity": "${SendActivity_k3OYdH()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "KUXiGQ"
+          },
+          "activity": "${SendActivity_KUXiGQ()}"
+        }
+      ]
+    }
+  ],
+  "generator": "exploreOurProjects.lg",
+  "recognizer": "exploreOurProjects.lu.qna",
+  "id": "exploreOurProjects"
+}

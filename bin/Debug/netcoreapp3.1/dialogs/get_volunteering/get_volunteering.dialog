@@ -1,0 +1,61 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "3x0nia",
+    "name": "get_volunteering",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "LfFetg"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "ibH3CG"
+          },
+          "activity": "${SendActivity_ibH3CG()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "74O1OY"
+          },
+          "activity": "${SendActivity_74O1OY()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "wjkeTr"
+          },
+          "activity": "${SendActivity_wjkeTr()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "aqVFxY"
+          },
+          "activity": "${SendActivity_aqVFxY()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "oXz4BU"
+          },
+          "activityProcessed": true,
+          "dialog": "otherQuestions"
+        }
+      ]
+    }
+  ],
+  "generator": "get_volunteering.lg",
+  "recognizer": "get_volunteering.lu.qna",
+  "id": "get_volunteering"
+}

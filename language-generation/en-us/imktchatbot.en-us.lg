@@ -14,24 +14,18 @@
 
 # SendActivity_DidNotUnderstand_text()
 - Sorry, I didn't get that.
-# SendActivity_7UlXKH()
+# TextInput_Prompt_q9ewkK()
 [Activity
-    Text = ${SendActivity_7UlXKH_text()}
+    Text = ${TextInput_Prompt_q9ewkK_text()}
 ]
 
-# SendActivity_7UlXKH_text()
-- discover what we doooooo
-# SendActivity_ilhMf4()
+# TextInput_Prompt_q9ewkK_text()
+- What's your name ? 
+# SendActivity_c9cott()
 [Activity
-    Text = ${SendActivity_ilhMf4_text()}
+    Text = ${SendActivity_c9cott_text()}
 ]
 
-# SendActivity_ilhMf4_text()
-- projecttttttsss
-# SendActivity_IJCa3V()
-[Activity
-    Text = ${SendActivity_IJCa3V_text()}
-]
-
-# SendActivity_IJCa3V_text()
-- Here are the list of our projects
+# SendActivity_c9cott_text()
+- ```InterMediaKT (Interactive Media Knowledge Transfer) is an NGO based in Patras, Greece, working since 2012 in the fields of education, training and innovation at the European level. Through technology tools, collaborations and the exchange of good practices, we try to achieve our main aim of Knowledge Transfer.
+```

@@ -1,0 +1,106 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "dqDSSU",
+    "name": "otherQuestions",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "t1coCq"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "0bgXCD"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_0bgXCD()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "user.otherQuestions",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "outputFormat": "value"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "bfJH3a"
+          },
+          "actions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "3yIEKf"
+              },
+              "activityProcessed": true,
+              "dialog": "true"
+            },
+            {
+              "$kind": "Microsoft.DeleteProperty",
+              "$designer": {
+                "id": "WWaypy"
+              },
+              "property": "user.otherQuestions"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "QooAkY"
+              },
+              "activity": "${SendActivity_QooAkY()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "i9TZfZ"
+              },
+              "activity": "${SendActivity_i9TZfZ()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "iqh1E8"
+              },
+              "activity": "${SendActivity_iqh1E8()}"
+            },
+            {
+              "$kind": "Microsoft.DeleteProperty",
+              "$designer": {
+                "id": "agjaus"
+              },
+              "property": "user.otherQuestions"
+            }
+          ],
+          "condition": "user.otherQuestions==\"Yes\""
+        }
+      ]
+    }
+  ],
+  "generator": "otherQuestions.lg",
+  "recognizer": "otherQuestions.lu.qna",
+  "id": "otherQuestions"
+}

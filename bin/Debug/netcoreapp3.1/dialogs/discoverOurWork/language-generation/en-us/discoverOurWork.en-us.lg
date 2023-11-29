@@ -1,0 +1,34 @@
+[import](common.lg)
+
+# SendActivity_lcLwXM()
+[Activity
+    Text = ${SendActivity_lcLwXM_text()}
+]
+
+# SendActivity_lcLwXM_text()
+- Our work covers a different range variety of fields.
+# SendActivity_fTx5ii()
+[Activity
+    Text = ${SendActivity_fTx5ii_text()}
+]
+
+# SendActivity_fTx5ii_text()
+- Education : For children & young people where we cover Programming & STEM as well as Web development. We also teach those above 65+ how to use computers and connect through social media.
+# SendActivity_wAPR0p()
+[Activity
+    Text = ${SendActivity_wAPR0p_text()}
+]
+
+# SendActivity_wAPR0p_text()
+- ```IT: We offer development of digital tools to foster knowledge transfer through websites, online learning platforms, Web/mobile applications  & games. We do this while keeping on mind the design aspect where we focus on an accessibility way of creating graphics and multimedia for a better communication.
+```
+# SendActivity_LvWfxS()
+[Activity
+Type = ${"delay"}
+Value = ${5000}
+]
+# SendActivity_HbPzJE()
+[Activity
+Type = ${"delay"}
+Value = ${5000}
+]

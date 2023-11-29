@@ -1,0 +1,29 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_0bgXCD_text()
+- Do you have other questions ?
+# ChoiceInput_Prompt_0bgXCD()
+[Activity
+    Text = ${ChoiceInput_Prompt_0bgXCD_text()}
+]
+
+# SendActivity_QooAkY_text()
+- I hope I ve answered all your questions. You can check our [news](https://intermediakt.org/our-news/) if you want to keep up to date with us.
+# SendActivity_QooAkY()
+[Activity
+    Text = ${SendActivity_QooAkY_text()}
+]
+
+# SendActivity_i9TZfZ_text()
+- You can contact us on our email : example@intermediakt.org or through phone : +306666666666
+# SendActivity_i9TZfZ()
+[Activity
+    Text = ${SendActivity_i9TZfZ_text()}
+]
+
+# SendActivity_iqh1E8_text()
+- We re an NGO and your support would create a huge change in our society. Please check our page on how to support us :) 
+# SendActivity_iqh1E8()
+[Activity
+    Text = ${SendActivity_iqh1E8_text()}
+]
