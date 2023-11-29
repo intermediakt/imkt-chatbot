@@ -22,14 +22,6 @@
             "id": "P7fmPK"
           },
           "activity": "${SendActivity_P7fmPK()}"
-        },
-        {
-          "$kind": "Microsoft.BeginDialog",
-          "$designer": {
-            "id": "qJyNCb"
-          },
-          "activityProcessed": true,
-          "dialog": "otherQuestions"
         }
       ]
     }

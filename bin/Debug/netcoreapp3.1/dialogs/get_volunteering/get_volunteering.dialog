@@ -43,14 +43,6 @@
             "id": "aqVFxY"
           },
           "activity": "${SendActivity_aqVFxY()}"
-        },
-        {
-          "$kind": "Microsoft.BeginDialog",
-          "$designer": {
-            "id": "oXz4BU"
-          },
-          "activityProcessed": true,
-          "dialog": "otherQuestions"
         }
       ]
     }

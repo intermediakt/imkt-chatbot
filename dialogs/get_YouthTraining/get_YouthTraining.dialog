@@ -22,14 +22,6 @@
             "id": "6UsOk5"
           },
           "activity": "${SendActivity_6UsOk5()}"
-        },
-        {
-          "$kind": "Microsoft.BeginDialog",
-          "$designer": {
-            "id": "szGU03"
-          },
-          "activityProcessed": true,
-          "dialog": "otherQuestions"
         }
       ]
     }
