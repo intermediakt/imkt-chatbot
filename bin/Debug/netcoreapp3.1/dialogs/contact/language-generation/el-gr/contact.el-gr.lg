@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_4d1mOq()
+[Activity
+    Text = ${SendActivity_4d1mOq_text()}
+]
+
+# SendActivity_4d1mOq_text()
+- If you have any more questions about collaboration or if you'd like to explore opportunities in other categories, feel free to choose another option. Otherwise, you can also ask about support, contact details, or the latest news. 

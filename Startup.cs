@@ -22,7 +22,7 @@ namespace imktchatbot
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddNewtonsoftJson(options => {
-                options.SerializerSettings.MaxDepth = HttpHelper.BotMessageSerializerSettings.MaxDepth;
+                options.SerializerSettings.MaxDepth = null;
             });
             services.AddBotRuntime(Configuration);
         }

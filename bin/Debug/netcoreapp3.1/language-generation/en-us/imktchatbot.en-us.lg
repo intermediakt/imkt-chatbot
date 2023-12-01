@@ -29,3 +29,10 @@
 # SendActivity_c9cott_text()
 - ```InterMediaKT (Interactive Media Knowledge Transfer) is an NGO based in Patras, Greece, working since 2012 in the fields of education, training and innovation at the European level. Through technology tools, collaborations and the exchange of good practices, we try to achieve our main aim of Knowledge Transfer.
 ```
+# SendActivity_IQJeoR()
+[Activity
+    Text = ${SendActivity_IQJeoR_text()}
+]
+
+# SendActivity_IQJeoR_text()
+- Welcome ${user.name}

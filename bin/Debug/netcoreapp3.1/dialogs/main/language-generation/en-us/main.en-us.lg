@@ -7,10 +7,30 @@
 
 # ChoiceInput_Prompt_o9I3RJ_text()
 - Please select the information you're requesting
-# SendActivity_sCQKXD()
+# ChoiceInput_Prompt_HVlBTv_text()
+- Do you have other questions ?
+# ChoiceInput_Prompt_HVlBTv()
 [Activity
-    Text = ${SendActivity_sCQKXD_text()}
+    Text = ${ChoiceInput_Prompt_HVlBTv_text()}
 ]
 
-# SendActivity_sCQKXD_text()
-- Please Welcome ${user.name}
+# SendActivity_lBRw21_text()
+- I hope I have answered all your questions. You can check our [news](https://intermediakt.org/our-news/) or our social  media [Facebook](https://www.facebook.com/InterMediaKT/), [IG](https://www.instagram.com/intermediakt/), [TikTok](https://www.tiktok.com/@intermediakt), LinkedIn, [YouTube](https://www.youtube.com/user/IntermediaktOrg), if you want to keep up to date with us
+# SendActivity_lBRw21()
+[Activity
+    Text = ${SendActivity_lBRw21_text()}
+]
+
+# SendActivity_UpbeH2_text()
+- You can contact us on our email: info@intermediakt.org or through phone: +302610220515 
+# SendActivity_UpbeH2()
+[Activity
+    Text = ${SendActivity_UpbeH2_text()}
+]
+
+# SendActivity_Dr4qRX_text()
+- We're an NGO and your support would create a huge change in our society. Please check our page on how to [support us](https://intermediakt.org/support-us/ ) 
+# SendActivity_Dr4qRX()
+[Activity
+    Text = ${SendActivity_Dr4qRX_text()}
+]

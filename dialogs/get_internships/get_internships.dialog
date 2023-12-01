@@ -22,6 +22,12 @@
             "id": "P7fmPK"
           },
           "activity": "${SendActivity_P7fmPK()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "c8MRLX"
+          }
         }
       ]
     }

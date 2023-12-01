@@ -6,14 +6,14 @@
 ]
 
 # SendActivity_lcLwXM_text()
-- Our work covers a different range variety of fields.
+- Our work covers a different range of fields.
 # SendActivity_fTx5ii()
 [Activity
     Text = ${SendActivity_fTx5ii_text()}
 ]
 
 # SendActivity_fTx5ii_text()
-- Education : For children & young people where we cover Programming & STEM as well as Web development. We also teach those above 65+ how to use computers and connect through social media.
+- For children & young people where we cover Programming & STEM as well as web development. For young workers, we offer soft skills workshops and intro into social entrepreneurship and innovation. We also teach those above 65+ how to use computers and connect through social media. 
 # SendActivity_wAPR0p()
 [Activity
     Text = ${SendActivity_wAPR0p_text()}

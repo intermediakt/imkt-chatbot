@@ -29,6 +29,12 @@
             "id": "KUXiGQ"
           },
           "activity": "${SendActivity_KUXiGQ()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "TREYlR"
+          }
         }
       ]
     }

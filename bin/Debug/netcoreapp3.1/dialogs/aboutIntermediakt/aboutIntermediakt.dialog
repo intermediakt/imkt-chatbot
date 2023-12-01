@@ -31,12 +31,11 @@
           "defaultLocale": "en-us",
           "disabled": false,
           "maxTurnCount": 3,
-          "alwaysPrompt": false,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_tV0k1X()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
-          "defaultValueResponse": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -49,7 +48,11 @@
             "Explore our current projects"
           ],
           "property": "user.achoice",
-          "style": "heroCard"
+          "style": "heroCard",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          }
         },
         {
           "$kind": "Microsoft.SwitchCondition",
@@ -67,14 +70,6 @@
                     "id": "ynlyeS"
                   },
                   "activity": "${SendActivity_ynlyeS()}"
-                },
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "78qeCR"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "otherQuestions"
                 }
               ]
             },
@@ -88,14 +83,6 @@
                   },
                   "activityProcessed": true,
                   "dialog": "discoverOurWork"
-                },
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "pRWock"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "otherQuestions"
                 }
               ]
             },
@@ -113,6 +100,12 @@
               ]
             }
           ]
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "OK5oqn"
+          }
         }
       ]
     }

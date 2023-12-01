@@ -22,6 +22,12 @@
             "id": "cSGvNg"
           },
           "activity": "${SendActivity_cSGvNg()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "RNBcn2"
+          }
         }
       ]
     }

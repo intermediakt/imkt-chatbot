@@ -17,13 +17,6 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "sCQKXD"
-          },
-          "activity": "${SendActivity_sCQKXD()}"
-        },
-        {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
             "id": "o9I3RJ"
@@ -31,7 +24,7 @@
           "defaultLocale": "en-us",
           "disabled": false,
           "maxTurnCount": 3,
-          "alwaysPrompt": false,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_o9I3RJ()}",
           "unrecognizedPrompt": "",
@@ -50,7 +43,8 @@
           ],
           "property": "user.choice",
           "recognizerOptions": {
-            "recognizeOrdinals": true
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
           },
           "value": "=this.value"
         },
@@ -71,6 +65,13 @@
                   },
                   "activityProcessed": true,
                   "dialog": "aboutIntermediakt"
+                },
+                {
+                  "$kind": "Microsoft.DeleteProperty",
+                  "$designer": {
+                    "id": "n7OrUp"
+                  },
+                  "property": "user.choice"
                 }
               ]
             },
@@ -84,6 +85,13 @@
                   },
                   "activityProcessed": true,
                   "dialog": "opportunities"
+                },
+                {
+                  "$kind": "Microsoft.DeleteProperty",
+                  "$designer": {
+                    "id": "ELRHSV"
+                  },
+                  "property": "user.choice"
                 }
               ]
             },
@@ -97,18 +105,99 @@
                   },
                   "activityProcessed": true,
                   "dialog": "collaboration"
+                },
+                {
+                  "$kind": "Microsoft.DeleteProperty",
+                  "$designer": {
+                    "id": "ge9N5W"
+                  },
+                  "property": "user.choice"
                 }
               ]
             }
           ]
         },
         {
-          "$kind": "Microsoft.BeginDialog",
+          "$kind": "Microsoft.ChoiceInput",
           "$designer": {
-            "id": "LVniGP"
+            "id": "HVlBTv"
           },
-          "activityProcessed": true,
-          "dialog": "otherQuestions"
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_HVlBTv()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "user.otherQuestions",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "5a5TwE"
+          },
+          "actions": [
+            {
+              "$kind": "Microsoft.RepeatDialog",
+              "$designer": {
+                "id": "M8OKzH"
+              },
+              "activityProcessed": true
+            },
+            {
+              "$kind": "Microsoft.DeleteProperty",
+              "$designer": {
+                "id": "o4W53l"
+              },
+              "property": "user.otherQuestions"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "lBRw21"
+              },
+              "activity": "${SendActivity_lBRw21()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "UpbeH2"
+              },
+              "activity": "${SendActivity_UpbeH2()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "Dr4qRX"
+              },
+              "activity": "${SendActivity_Dr4qRX()}"
+            },
+            {
+              "$kind": "Microsoft.DeleteProperty",
+              "$designer": {
+                "id": "8y6otD"
+              },
+              "property": "user.otherQuestions"
+            }
+          ],
+          "condition": "user.otherQuestions==\"Yes\""
         },
         {
           "$kind": "Microsoft.EndDialog",

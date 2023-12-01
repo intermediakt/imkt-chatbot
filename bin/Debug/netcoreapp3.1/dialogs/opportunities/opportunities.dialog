@@ -24,12 +24,11 @@
           "defaultLocale": "en-us",
           "disabled": false,
           "maxTurnCount": 3,
-          "alwaysPrompt": false,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_XpPZOc()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
-          "defaultValueResponse": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -42,7 +41,10 @@
             "Volunteering"
           ],
           "property": "user.opportunities",
-          "style": "heroCard"
+          "style": "heroCard",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
         },
         {
           "$kind": "Microsoft.SwitchCondition",
@@ -66,10 +68,17 @@
                 {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "yDMI4F"
+                    "id": "TDFUXa"
                   },
                   "activityProcessed": true,
                   "dialog": "get_YouthTraining"
+                },
+                {
+                  "$kind": "Microsoft.DeleteProperty",
+                  "$designer": {
+                    "id": "4WDwmG"
+                  },
+                  "property": "user.opportunities"
                 }
               ]
             },
@@ -79,10 +88,17 @@
                 {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "nY01IM"
+                    "id": "gdrzNS"
                   },
                   "activityProcessed": true,
                   "dialog": "get_volunteering"
+                },
+                {
+                  "$kind": "Microsoft.DeleteProperty",
+                  "$designer": {
+                    "id": "Spuq9d"
+                  },
+                  "property": "user.opportunities"
                 }
               ]
             },
@@ -92,22 +108,27 @@
                 {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "gtp9kQ"
+                    "id": "8lVTlv"
                   },
                   "activityProcessed": true,
                   "dialog": "get_internships"
+                },
+                {
+                  "$kind": "Microsoft.DeleteProperty",
+                  "$designer": {
+                    "id": "S1kERn"
+                  },
+                  "property": "user.opportunities"
                 }
               ]
             }
           ]
         },
         {
-          "$kind": "Microsoft.BeginDialog",
+          "$kind": "Microsoft.EndDialog",
           "$designer": {
-            "id": "5vcumE"
-          },
-          "activityProcessed": true,
-          "dialog": "otherQuestions"
+            "id": "uSlv3X"
+          }
         }
       ]
     }

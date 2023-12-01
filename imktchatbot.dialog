@@ -60,6 +60,13 @@
               "outputFormat": "=trim(user.name)"
             },
             {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "IQJeoR"
+              },
+              "activity": "${SendActivity_IQJeoR()}"
+            },
+            {
               "$kind": "Microsoft.BeginDialog",
               "$designer": {
                 "id": "foiIOj"

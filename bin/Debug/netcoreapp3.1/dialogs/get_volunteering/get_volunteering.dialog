@@ -43,6 +43,12 @@
             "id": "aqVFxY"
           },
           "activity": "${SendActivity_aqVFxY()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "wjOTM4"
+          }
         }
       ]
     }

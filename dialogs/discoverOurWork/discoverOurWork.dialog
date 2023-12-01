@@ -50,6 +50,12 @@
             "id": "wAPR0p"
           },
           "activity": "${SendActivity_wAPR0p()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "g3xSQI"
+          }
         }
       ]
     }

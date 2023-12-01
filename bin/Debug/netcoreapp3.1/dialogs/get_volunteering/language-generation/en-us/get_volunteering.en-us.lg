@@ -14,7 +14,7 @@
 ]
 
 # SendActivity_wjkeTr_text()
-- An ESC project can include between 1 and 30 volunteers who contribute to the day-to-day activities of organizations. In which sector? Depending on what you care about and appreciate, environment, arts and culture, children, people with disabilities, social inclusion, intercultural learning, youth policies and much more.
+- An ESC project engage volunteers who contribute to the day-to-day activities of organizations. In which sector? Depending on what you care about and appreciate, environment, arts and culture, children, people with disabilities, social inclusion, intercultural learning, youth policies and much more.
 # SendActivity_aqVFxY()
 [Activity
     Text = ${SendActivity_aqVFxY_text()}
